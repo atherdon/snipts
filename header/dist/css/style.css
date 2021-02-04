@@ -504,6 +504,10 @@ body.dark .header__adv-link {
     color: #f5ec43;
 }
 
+body.dark .header__menu-item.dropdown a {
+    color: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -828,6 +832,10 @@ a {
     color: #fff;
 }
 
+.header__menu-item a {
+    color: inherit;
+}
+
 .header__menu-item.dropdown a {
     color: #0f0;
 }
@@ -897,6 +905,7 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     border-left: 2px solid #0f0;
+    white-space: nowrap;
 }
 
 .dropdown__list::before {
@@ -929,18 +938,18 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 300px;
     padding: 5px 15px;
+    max-width: 300px;
 }
 
 .dropdown__list li a {
     overflow-wrap: break-word;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .dropdown .line {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 50%;
     width: 10px;
     height: 2px;
@@ -972,12 +981,6 @@ a {
     font-size: 20px;
 }
 
-@media only screen and (max-width: 1460px) {
-    .dropdown__list li a {
-        white-space: normal;
-    }
-}
-
 @media only screen and (max-width: 1220px) {
     .dropdown__nav {
         left: 5%;
@@ -998,17 +1001,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .header__logo-desktop {
-        display: none;
-    }
-
-    .header__logo-mobile {
-        display: block;
-    }
-}
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 935px) {
     .header__btns .btn.login {
         display: none;
     }
@@ -1022,6 +1015,16 @@ a {
     }
 
     .burger__menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header__logo-desktop {
+        display: none;
+    }
+
+    .header__logo-mobile {
         display: block;
     }
 }

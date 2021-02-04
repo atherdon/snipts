@@ -1,6 +1,4 @@
 .header {
-	// position: fixed;
-	// z-index: 100;
 	width: 100%;
 	background-color: $green;
 
@@ -46,9 +44,6 @@
 
 	&__social {
 		display: none;
-		// @media only screen and (max-width: 700px) {
-		// 	display: none;
-		// }
 	}
 
 	&__social-item {
@@ -76,7 +71,7 @@
 			}
 
 			&.login {
-				@media only screen and (max-width: 700px) {
+				@media only screen and (max-width: 935px) {
 					display: none;
 				}
 			}
@@ -84,7 +79,7 @@
 			&.start {
 				border: 1px solid $shark;
 
-				@media only screen and (max-width: 700px) {
+				@media only screen and (max-width: 935px) {
 					display: none;
 				}
 			}
@@ -117,7 +112,7 @@
 		justify-content: center;
 		background-color: $deep-fir;
 
-		@media only screen and (max-width: 700px) {
+		@media only screen and (max-width: 935px) {
 			display: none;
 		}
 	}
@@ -151,6 +146,10 @@
 		padding: 0 10px;
 		line-height: 43px;
 		color: $white;
+
+		a {
+			color: inherit;
+		}
 
 		&.dropdown {
 			a {
@@ -192,7 +191,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 700px) {
+	@media only screen and (max-width: 935px) {
 		display: block;
 	}
 }
@@ -229,6 +228,7 @@
 		flex-direction: column;
 		justify-content: center;
 		border-left: 2px solid $green;
+		white-space: nowrap;
 
 		&::before {
 			content: "";
@@ -254,23 +254,19 @@
 
 		li {
 			display: flex;
-			max-width: 300px;
 			padding: 5px 15px;
+			max-width: 300px;
 
 			a {
 				overflow-wrap: break-word;
-				white-space: nowrap;
-
-				@media only screen and (max-width: 1460px) {
-					white-space: normal;
-				}
+				white-space: normal;
 			}
 		}
 	}
 
 	.line {
 		position: absolute;
-		right: 0px;
+		right: 0;
 		top: 50%;
 		width: 10px;
 		height: 2px;
@@ -288,9 +284,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		//border-right: 2px solid $green;
 		padding-right: 25px;
-
 		font-size: 20px;
 	}
 }
