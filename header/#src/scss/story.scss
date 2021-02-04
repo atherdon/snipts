@@ -1,0 +1,235 @@
+.story {
+	margin: 0 auto;
+	padding-top: 140px;
+	width: 100%;
+	max-width: 1200px;
+
+	.story-meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media only screen and (max-width: 700px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	h1 {
+		line-height: 1.4;
+		text-align: center;
+
+		@media only screen and (max-width: 700px) {
+			font-size: 20px;
+			padding-bottom: 20px;
+		}
+	}
+
+	.story-reactions {
+		&.bottom {
+			width: 80%;
+
+			@media only screen and (max-width: 700px) {
+				width: 100%;
+			}
+		}
+	}
+
+	.reactions {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		label {
+			margin-right: 10px;
+			height: 20px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+
+	.emojis {
+		display: flex;
+
+		img {
+			height: 30px;
+			opacity: 0.5;
+			filter: grayscale(1);
+			transform: scale(1);
+			transition: all 120ms ease-in-out 0s;
+			cursor: pointer;
+
+			&:hover {
+				opacity: 1;
+				filter: grayscale(0);
+			}
+		}
+	}
+
+	.emoji-container {
+		margin: 0 5px;
+	}
+
+	.story-bookmark {
+		display: flex;
+		align-items: center;
+		line-height: 20px;
+	}
+
+	.date {
+		font-size: 18px;
+	}
+
+	.bookmark {
+		border: none;
+		background: transparent;
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.fullscreen {
+		margin-top: 20px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.2s ease 0s;
+
+			&:hover {
+				transform: scale(1.02);
+				transition: transform 0.2s ease 0s;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		margin-top: 20px;
+
+		@media only screen and (max-width: 700px) {
+			flex-wrap: wrap;
+			padding: 10px;
+		}
+	}
+
+	&__profile {
+		margin-right: 20px;
+		max-width: 230px;
+
+		@media only screen and (max-width: 700px) {
+			margin-bottom: 20px;
+		}
+
+		.avatar {
+			max-width: 75px;
+			box-shadow: rgb(194, 202, 214) 0px 0.2em, rgb(194, 202, 214) 0px -0.2em, rgb(194, 202, 214) 0.2em 0px,
+				rgb(194, 202, 214) -0.2em 0px;
+		}
+
+		h3 {
+			line-height: 20px;
+
+			a {
+				font-size: 16px;
+			}
+
+			small {
+				display: block;
+				font-weight: 400;
+			}
+		}
+	}
+
+	&__profile-content {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+
+		p {
+			margin-top: 20px;
+		}
+
+		.social-icons {
+			margin-top: 20px;
+		}
+	}
+
+	&__paragraph {
+		display: flex;
+		margin-bottom: 20px;
+
+		p {
+			width: 80%;
+			font-size: 18px;
+			line-height: 26px;
+
+			@media only screen and (max-width: 700px) {
+				width: 100%;
+			}
+
+			span {
+				font-weight: 700;
+			}
+
+			a {
+				font-size: 18px;
+			}
+		}
+
+		.p-reaction {
+			@media only screen and (max-width: 700px) {
+				display: none;
+			}
+		}
+	}
+
+	h2 {
+		display: block;
+		margin-bottom: 20px;
+		width: 80%;
+
+		strong {
+			font-weight: 700;
+			font-size: 24px;
+		}
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+
+	}
+
+	.tag-link {
+		background: rgb(246, 247, 249);
+		color: rgb(60, 60, 59);
+		font-weight: bold;
+		text-decoration: none;
+		display: inline-block;
+		line-height: 1em;
+		box-shadow: rgb(194, 202, 214) 0px 0.2em, rgb(194, 202, 214) 0px -0.2em, rgb(194, 202, 214) 0.2em 0px,
+			rgb(194, 202, 214) -0.2em 0px;
+		padding: 10px;
+		margin: 0px 10px 10px 0px;
+
+		&:hover {
+			background: rgb(0, 255, 0);
+			color: rgb(60, 60, 59);
+			box-shadow: rgb(0, 187, 0) 0px 0.2em, rgb(0, 187, 0) 0px -0.2em, rgb(0, 187, 0) 0.2em 0px, rgb(0, 187, 0) -0.2em 0px;
+			transition: all 120ms ease-in-out 0s;
+		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		padding-top: 60px;
+	}
+}

@@ -1,0 +1,26 @@
+.button-join {
+	
+
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 3fr 1fr;
+		margin-top: 30px;
+		gap: 10px;
+	}
+
+	&__layout {
+		grid-column: 2 / -2;
+		text-align: center;
+
+		a {
+			display: inline-block;
+			margin-bottom: 10px;
+			border: 4px solid rgb(0, 255, 0);
+			padding: 0.25em 0.5em;
+			font-weight: 700;
+			font-size: 30px;
+			color: rgb(0, 255, 0);
+			background-color: rgb(33, 36, 40);
+		}
+	}
+}

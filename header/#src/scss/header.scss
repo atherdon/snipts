@@ -1,0 +1,296 @@
+.header {
+	// position: fixed;
+	// z-index: 100;
+	width: 100%;
+	background-color: $green;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__top-item {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-left: 20px;
+	}
+
+	&__logo-desktop {
+		width: 248px;
+		height: 40px;
+
+		@media only screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	&__logo-mobile {
+		display: none;
+		width: 37px;
+		height: 40px;
+
+		@media only screen and (max-width: 800px) {
+			display: block;
+		}
+	}
+
+	&__social,
+	&__top-item-inner {
+		display: flex;
+	}
+
+	&__social {
+		display: none;
+		// @media only screen and (max-width: 700px) {
+		// 	display: none;
+		// }
+	}
+
+	&__social-item {
+		padding: 10px;
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	&__btns {
+		display: flex;
+
+		.btn {
+			margin: 0 5px;
+			border: 1px solid transparent;
+			padding: 0 10px;
+			font-size: 14px;
+			color: $black;
+
+			&:hover {
+				border: 1px solid $shark;
+				background-color: $screamin-green;
+			}
+
+			&.login {
+				@media only screen and (max-width: 700px) {
+					display: none;
+				}
+			}
+
+			&.start {
+				border: 1px solid $shark;
+
+				@media only screen and (max-width: 700px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__theme {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		background-color: $green;
+		cursor: pointer;
+
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&__theme-dark {
+		display: none;
+	}
+
+	&__bottom {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $deep-fir;
+
+		@media only screen and (max-width: 700px) {
+			display: none;
+		}
+	}
+
+	&__adv {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		background-color: $starship;
+
+		img {
+			margin-right: 10px;
+			border-radius: 2px;
+			width: 25px;
+		}
+	}
+
+	&__adv-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__menu-list {
+		display: flex;
+	}
+
+	&__menu-item {
+		// position: relative;
+		padding: 0 10px;
+		line-height: 43px;
+		color: $white;
+
+		&.dropdown {
+			a {
+				color: $green;
+			}
+
+			&:hover {
+				.dropdown__nav {
+					display: flex;
+				}
+			}
+		}
+
+		&.adv {
+			a {
+				color: $white;
+			}
+		}
+	}
+}
+
+.burger__menu {
+	display: none;
+	padding: 0 10px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+
+	.burger {
+		background-color: $tuatara;
+
+		&::before,
+		&::after {
+			background-color: $tuatara;
+		}
+
+		&.burger-active {
+			background-color: transparent;
+		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		display: block;
+	}
+}
+
+.dropdown {
+	&__nav {
+		position: absolute;
+		left: 10%;
+		right: 10%;
+		bottom: 0;
+		z-index: 9999;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		padding: 40px;
+		line-height: 20px;
+		background-color: $deep-fir;
+		transform: translateY(100%);
+
+		@media only screen and (max-width: 1220px) {
+			left: 5%;
+			right: 5%;
+		}
+
+		@media only screen and (max-width: 1065px) {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__list {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-left: 2px solid $green;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -10px;
+			bottom: 0;
+			width: 10px;
+			height: 2px;
+			background: $green;
+			transform: translateX(100%);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: -10px;
+			top: 0;
+			width: 10px;
+			height: 2px;
+			background: $green;
+			transform: translateX(100%);
+		}
+
+		li {
+			display: flex;
+			max-width: 300px;
+			padding: 5px 15px;
+
+			a {
+				overflow-wrap: break-word;
+				white-space: nowrap;
+
+				@media only screen and (max-width: 1460px) {
+					white-space: normal;
+				}
+			}
+		}
+	}
+
+	.line {
+		position: absolute;
+		right: 0px;
+		top: 50%;
+		width: 10px;
+		height: 2px;
+		background: $green;
+		transform: translateY(-50%);
+	}
+
+	&__nav-menu {
+		display: flex;
+		align-items: center;
+		margin: 0 15px;
+	}
+
+	&__nav-menu-title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		//border-right: 2px solid $green;
+		padding-right: 25px;
+
+		font-size: 20px;
+	}
+}
