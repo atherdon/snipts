@@ -1,0 +1,36 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	width: 100%;
+	background-color: $athens-gray;
+
+	&__menu-list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 5px 0;
+	}
+
+	&__menu-item {
+		margin-right: 20px;
+
+		a {
+			//color: $white;
+		}
+	}
+
+	&__follow {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__follow-item {
+		margin: 0 5px;
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

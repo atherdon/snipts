@@ -1,0 +1,260 @@
+.main {
+	padding-top: 100px;
+
+	@media only screen and (max-width: 700px) {
+		padding-top: 50px;
+	}
+
+	&__inner {
+		margin: 0 auto;
+		padding: 40px 10px;
+		max-width: 1200px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&.column {
+			flex-direction: column;
+			justify-content: center;
+
+			p {
+				margin-top: 20px;
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+
+		@media only screen and (max-width: 1200px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__top-title {
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	&__top-search {
+		.search-input {
+			margin: 1rem 0;
+			outline-color: rgb(0, 187, 0);
+			border: none;
+			border-radius: 5px;
+			padding: 1rem;
+			width: 100%;
+			font-weight: 700;
+			font-size: 2rem;
+			background: rgb(246, 247, 249);
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 20px;
+
+		@media only screen and (max-width: 1200px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__bottom-item {
+		a {
+			font-size: 20px;
+			//color: $white;
+		}
+
+		&.looking {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+
+			@media only screen and (max-width: 1200px) {
+				margin-top: 10px;
+			}
+		}
+
+		&.text {
+			max-width: 700px;
+			font-size: 20px;
+			color: $tuatara;
+
+			@media only screen and (max-width: 1200px) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__wrapper-list {
+		display: grid;
+		align-items: start;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		margin-top: 20px;
+		// padding: 10px;
+		gap: 10px 25px;
+
+		&.tagged {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 25px;
+		}
+	}
+
+	&__wrapper-item {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr auto;
+		padding: 5px;
+		font-size: 1.75rem;
+
+		svg {
+			width: 18px;
+		}
+
+		.link {
+			font-size: 18px;
+			//color: $white;
+		}
+
+		small {
+			font-size: 14px;
+		}
+	}
+
+	
+	.bio-sections {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.bio-section {
+		display: flex;
+		width: 48%;
+
+		@media only screen and (max-width: 815px) {
+			width: 100%;
+		}
+
+		small {
+			padding-top: 5px;
+			font-weight: 900;
+			font-size: 18px;
+			color: $periwinkle-gray;
+		}
+	}
+
+	.bio-text {
+		margin-top: 10px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.social {
+		margin-top: 10px;
+	}
+
+	.avatar {
+		margin-right: 25px;
+		width: 150px;
+		height: 150px;
+		min-width: 150px;
+		min-height: 150px;
+		box-shadow: rgb(194, 202, 214) 0px 8px, rgb(194, 202, 214) 0px -8px, rgb(194, 202, 214) 8px 0px,
+			rgb(194, 202, 214) -8px 0px;
+
+		@media only screen and (max-width: 414px) {
+			width: 75px;
+			height: 75px;
+			min-width: 75px;
+			min-height: 75px;
+		}
+	}
+
+	.divider {
+		margin: 15px;
+		width: 2px;
+		min-width: 2px;
+		background: rgb(194, 202, 214);
+
+		@media only screen and (max-width: 815px) {
+			display: none;
+		}
+	}
+
+	.reading-time {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48%;
+
+		@media only screen and (max-width: 815px) {
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
+
+	.label {
+		text-align: center;
+		font-size: 18px;
+		line-height: 28px;
+	}
+
+	u {
+		position: relative;
+		text-decoration: none;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -3px;
+			height: 4px;
+			background: linear-gradient(
+				90deg,
+				rgb(255, 129, 0),
+				rgb(255, 248, 36),
+				rgb(138, 255, 138),
+				rgb(10, 187, 255),
+				rgb(204, 61, 230)
+			);
+		}
+	}
+
+	.time {
+		padding: 10px 0;
+		font-weight: 900;
+		font-size: 24px;
+		text-align: center;
+	}
+}
+
+.stories {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	font-weight: 900;
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+
+	&::after,
+	&::before {
+		content: "";
+		flex: 1 1 0%;
+		border-bottom: 3px solid rgb(60, 60, 59);
+	}
+
+	&::after {
+		margin-left: 30px;
+	}
+
+	&::before {
+		margin-right: 30px;
+	}
+}
