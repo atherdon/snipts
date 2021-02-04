@@ -70,6 +70,12 @@ body {
 		.header__adv-link {
 			color: $starship;
 		}
+
+		.header__menu-item.dropdown {
+			a {
+				color: $white;
+			}
+		}
 	}
 }
 
