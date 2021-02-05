@@ -525,6 +525,30 @@ body.dark .header__profile .profile__content li button {
     color: #fff;
 }
 
+body.dark .header__search .search-input {
+    color: #fff;
+}
+
+body.dark .header__search .search-input::-webkit-input-placeholder {
+    color: #e7e7e8;
+}
+
+body.dark .header__search .search-input::-moz-placeholder {
+    color: #e7e7e8;
+}
+
+body.dark .header__search .search-input:-ms-input-placeholder {
+    color: #e7e7e8;
+}
+
+body.dark .header__search .search-input::-ms-input-placeholder {
+    color: #e7e7e8;
+}
+
+body.dark .header__search .search-input::placeholder {
+    color: #e7e7e8;
+}
+
 h1,
 h2,
 h3,
