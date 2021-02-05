@@ -76,6 +76,41 @@ body {
 				color: $white;
 			}
 		}
+
+		.header__profile {
+			img {
+				box-shadow: $deep-fir 0 0.15em, $deep-fir 0 -0.15em, $deep-fir 0.15em 0, $deep-fir -0.15em 0;
+			}
+
+			.profile {
+				&__menu-box {
+					background-color: $green-tagged-header;
+				}
+
+				&__content {
+					li {
+						&:hover {
+							background-color: $screamin-green;
+						}
+
+						button {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+
+		.header__search {
+			.search-input {
+				color: $white;
+
+				&::placeholder {
+					color: $iron;
+				}
+			}
+		}
+
 	}
 }
 
