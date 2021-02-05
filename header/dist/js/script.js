@@ -126,8 +126,26 @@ jQuery(function ($) {
 			e.preventDefault();
 			$('.mobile__menu').removeClass('open');
 			$('.burger').removeClass('burger-active');
+
+			if ($('.mobile__menu-dropdown').hasClass('dropdown-open')) {
+				$('.mobile__menu-dropdown').removeClass('dropdown-open');
+			}
 			
 		});
+
+
+		$('.dropdown-btn').on('click', function (e) {
+			e.preventDefault();
+			$(this).parent().find('.mobile__menu-dropdown').addClass('dropdown-open');
+		
+		});
+
+		$('.dropdown-close').on('click', (e) => {
+			e.preventDefault();
+			$(this).find('.mobile__menu-dropdown').removeClass('dropdown-open');
+		})
+
+
 
 
 		$('.header__theme').on('click', function (e) {
