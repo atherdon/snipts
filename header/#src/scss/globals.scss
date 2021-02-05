@@ -89,12 +89,12 @@ body {
 
 				&__content {
 					li {
-						&:hover {
-							background-color: $screamin-green;
-						}
-
 						button {
 							color: $white;
+						}
+
+						&:hover {
+							background-color: $screamin-green;
 						}
 					}
 				}
@@ -110,7 +110,6 @@ body {
 				}
 			}
 		}
-
 	}
 }
 

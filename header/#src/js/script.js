@@ -118,8 +118,15 @@ jQuery(function ($) {
 
 		$('.burger__menu').on('click', function (e) {
 			e.preventDefault();
-			$('.burger').toggleClass('burger-active');
-			$('.nav-header').toggleClass('nav-header__active');
+			$('.burger').addClass('burger-active');
+			$('.mobile__menu').addClass('open');
+		});
+
+		$('.mobile__menu-close').on('click', function (e) {
+			e.preventDefault();
+			$('.mobile__menu').removeClass('open');
+			$('.burger').removeClass('burger-active');
+			
 		});
 
 
