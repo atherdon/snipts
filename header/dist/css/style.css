@@ -508,6 +508,23 @@ body.dark .header__menu-item.dropdown a {
     color: #fff;
 }
 
+body.dark .header__profile img {
+    -webkit-box-shadow: #003b00 0 0.15em, #003b00 0 -0.15em, #003b00 0.15em 0, #003b00 -0.15em 0;
+            box-shadow: #003b00 0 0.15em, #003b00 0 -0.15em, #003b00 0.15em 0, #003b00 -0.15em 0;
+}
+
+body.dark .header__profile .profile__menu-box {
+    background-color: #0b0;
+}
+
+body.dark .header__profile .profile__content li:hover {
+    background-color: #62ff86;
+}
+
+body.dark .header__profile .profile__content li button {
+    color: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -850,6 +867,134 @@ a {
     color: #fff;
 }
 
+.header__profile {
+    position: relative;
+    margin-right: 10px;
+}
+
+.header__profile img {
+    display: block;
+    max-height: 40px;
+    -webkit-box-shadow: #0b0 0 0.15em, #0b0 0 -0.15em, #0b0 0.15em 0, #0b0 -0.15em 0;
+            box-shadow: #0b0 0 0.15em, #0b0 0 -0.15em, #0b0 0.15em 0, #0b0 -0.15em 0;
+}
+
+.header__profile .profile__menu {
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    z-index: 9999;
+    display: none;
+    padding-top: 20px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.header__profile .profile__menu-box {
+    position: relative;
+    border: 2px solid #3c3c3b;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 350px;
+    -webkit-box-shadow: #cdcdcd 2px 2px 0, #fff -2px -2px 0;
+            box-shadow: #cdcdcd 2px 2px 0, #fff -2px -2px 0;
+    color: #3c3c3b;
+    background-color: #fff;
+}
+
+.header__profile .profile__content li {
+    border-bottom: 2px solid #3c3c3b;
+}
+
+.header__profile .profile__content li a,
+.header__profile .profile__content li button {
+    display: block;
+    border: 0;
+    padding: 8px 10px;
+    width: 100%;
+    font-weight: 600;
+    text-align: right;
+}
+
+.header__profile .profile__content li button {
+    background-color: transparent;
+}
+
+.header__profile .profile__content li:hover {
+    background-color: #0f0;
+}
+
+.header__profile .profile__content li:last-child {
+    border-bottom: 0;
+}
+
+.header__profile:hover .profile__menu {
+    display: block;
+}
+
+.header__search {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    height: 40px;
+}
+
+.header__search .search-input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 3px;
+    padding-right: 40px;
+    width: 0;
+    height: 40px;
+    font-weight: 100;
+    color: #3c3c3b;
+    background: none;
+    -webkit-transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+    -o-transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+    transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+    cursor: pointer;
+}
+
+.header__search .search-input:focus {
+    z-index: 1;
+    border-bottom: 1px solid #bbb;
+    width: 500px;
+    cursor: text;
+}
+
+.header__search .search-input:focus:hover {
+    border-bottom: 1px solid #bbb;
+}
+
+.header__search .search-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: inline-block;
+    outline: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    text-indent: -10000px;
+    background: url("../img/u_search.svg") center center no-repeat;
+    opacity: 0.4;
+    -webkit-transition: opacity 0.4s ease;
+    -o-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
+    cursor: pointer;
+}
+
+.header__search .search-submit:hover {
+    opacity: 0.8;
+}
+
 .burger__menu {
     display: none;
     padding: 0 10px;
@@ -995,6 +1140,12 @@ a {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .header__search .search-input:focus {
+        width: 400px;
+    }
+}
+
 @media only screen and (max-width: 968px) {
     .burger {
         display: block;
@@ -1014,6 +1165,10 @@ a {
         display: none;
     }
 
+    .header__profile {
+        display: none;
+    }
+
     .burger__menu {
         display: block;
     }
@@ -1026,5 +1181,23 @@ a {
 
     .header__logo-mobile {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header__search .search-input:focus {
+        width: 220px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header__search .search-input:focus {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .header__search .search-input:focus {
+        width: 150px;
     }
 }
