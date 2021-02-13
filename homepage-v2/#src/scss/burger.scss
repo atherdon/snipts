@@ -1,0 +1,56 @@
+// * ===========  BURGER =========== //
+.burger {
+	position: relative;
+	top: 50%;
+	display: none;
+	width: 30px;
+	height: 3px;
+	background-color: $white;
+	transform: translateY(-50%);
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 10px;
+		display: block;
+		width: 30px;
+		height: 3px;
+		background-color: $white;
+		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: -10px;
+		display: block;
+		width: 30px;
+		height: 3px;
+		background-color: $white;
+		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	}
+
+	&.burger-active {
+		background-color: transparent;
+	}
+
+	&.burger-active::after {
+		top: 0;
+		background-color: $black;
+		transform: rotate(45deg);
+		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	}
+
+	&.burger-active::before {
+		top: 0;
+		background-color: $black;
+		transform: rotate(-45deg);
+		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	}
+
+	@media only screen and (max-width: 968px) {
+		display: block;
+	}
+}

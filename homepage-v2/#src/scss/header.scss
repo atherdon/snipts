@@ -1,0 +1,138 @@
+.header {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	background-color: $green;
+
+	&__top-desktop {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 50px;
+		width: 100%;
+		height: 100%;
+
+		@media only screen and (max-width: 650px) {
+			padding: 10px;
+		}
+
+		@media only screen and (max-width: 575px) {
+			display: none;
+		}
+	}
+
+	&__top-item {
+		display: flex;
+		align-items: center;
+	}
+
+	&__top-mobile {
+		display: none;
+		justify-content: space-between;
+		padding: 10px;
+		width: 100%;
+		height: 100%;
+
+		@media only screen and (max-width: 575px) {
+			display: flex;
+
+			.burger__menu {
+				display: block;
+			}
+		}
+
+	}
+
+	&__search {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__search-top {
+		display: flex;
+		padding-bottom: 10px;
+
+		.item {
+			span {
+				text-transform: uppercase;
+			}
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__search-input {
+		padding: 10px;
+		width: 210px;
+		color: $green;
+		background-color: $deep-fir;
+
+		&::placeholder {
+			color: $green-darken;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__logo-img {
+		width: 37px;
+		height: 40px;
+	}
+
+	&__logo-title {
+		font-family: "HackerNoonV1-Regular", serif;
+		font-size: 32px;
+
+		@media only screen and (max-width: 1150px) {
+			display: none;
+		}
+	}
+
+	&__logo-welcome {
+		font-size: 22px;
+		@media only screen and (max-width: 1150px) {
+			display: none;
+		}
+	}
+
+	&__btns {
+		display: flex;
+
+		.btn {
+			margin: 0 5px;
+			border: 2px solid transparent;
+			padding: 0 10px;
+			font-size: 18px;
+			text-transform: uppercase;
+			color: $black;
+
+			&:hover {
+				border: 2px solid $shark;
+				background-color: $screamin-green;
+			}
+
+			&.subscribe {
+				border: 2px solid $shark;
+				padding-left: 35px;
+
+				sup {
+					font-size: 12px;
+				}
+
+				@media only screen and (max-width: 320px) {
+					padding-left: 10px;
+				}
+			}
+
+			@media only screen and (max-width: 320px) {
+				font-size: 16px;
+			}
+		}
+	}
+}
