@@ -625,8 +625,8 @@ a {
     padding: 2px 0 1px;
     font-size: 12px;
     word-break: break-word;
-    background-image: -o-linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%);
-    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%);
+    background-image: -o-linear-gradient(transparent 0%, transparent calc(50% - 9px), #a6ffa6 calc(50% - 9px), #a6ffa6 100%);
+    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #a6ffa6 calc(50% - 9px), #a6ffa6 100%);
     background-position: 0 0;
     background-size: 100% 200%;
     -webkit-transition: all 120ms ease-in-out 0s;
@@ -636,8 +636,8 @@ a {
 }
 
 .link:hover {
-    background-image: -o-linear-gradient(transparent 0%, transparent calc(50% - 9px), lime calc(50% - 9px), lime 100%);
-    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), lime calc(50% - 9px), lime 100%);
+    background-image: -o-linear-gradient(transparent 0%, transparent calc(50% - 9px), #0f0 calc(50% - 9px), #0f0 100%);
+    background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #0f0 calc(50% - 9px), #0f0 100%);
     background-position: 0 100%;
 }
 
@@ -653,6 +653,7 @@ a {
             justify-content: center;
     padding: 10px;
     width: 100%;
+    font-size: 18px;
     background-color: #f5ec43;
 }
 
@@ -676,6 +677,26 @@ a {
 
 .adv.violet a {
     color: #fff;
+}
+
+.adv.crimson {
+    background-color: #ea2429;
+}
+
+.adv.crimson a {
+    color: #fff;
+}
+
+.adv.finn {
+    background-color: #622362;
+}
+
+.adv.finn a {
+    color: #fff;
+}
+
+.adv.gorse {
+    background-color: #ffff56;
 }
 
 .adv-link {
@@ -927,6 +948,8 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .main-page .item .column {
@@ -1015,9 +1038,9 @@ a {
     text-decoration: none;
     color: #3c3c3b;
     background: #f6f7f9;
-    -webkit-transition: all 0.2s lease-in-out 0sr;
-    -o-transition: all 0.2s lease-in-out 0sr;
-    transition: all 0.2s lease-in-out 0sr;
+    -webkit-transition: all 0.2s lease-in-out 0s;
+    -o-transition: all 0.2s lease-in-out 0s;
+    transition: all 0.2s lease-in-out 0s;
 }
 
 .main-page .item .column .row .content__image .tag-link:hover {
@@ -1113,6 +1136,85 @@ a {
     font-size: 12px;
 }
 
+.main-page .item .column .tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.main-page .item .column .tags .tag-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+    margin-right: 5px;
+    border: 2px solid #3b3b3b;
+    border-radius: 5px;
+    background-color: #e7e7e8;
+}
+
+.main-page .item .column .tags .tag-item p {
+    white-space: nowrap;
+}
+
+.main-page .item .column .tags .tag-item span {
+    padding-top: 10px;
+    font-family: "IBMPlexMono-Regular";
+    white-space: nowrap;
+}
+
+.main-page .item .column .tags .tag-item.sm {
+    padding: 10px;
+}
+
+.main-page .item .column .tags .tag-item.sm p {
+    font-size: 18px;
+}
+
+.main-page .item .column .tags .tag-item.sm span {
+    font-size: 12px;
+}
+
+.main-page .item .column .tags .tag-item.md {
+    padding: 10px;
+}
+
+.main-page .item .column .tags .tag-item.md p {
+    font-size: 22px;
+}
+
+.main-page .item .column .tags .tag-item.md span {
+    font-size: 16px;
+}
+
+.main-page .item .column .tags .tag-item.xl {
+    padding: 20px;
+}
+
+.main-page .item .column .tags .tag-item.xl p {
+    font-size: 26px;
+}
+
+.main-page .item .column .tags .tag-item.xl span {
+    font-size: 18px;
+}
+
 .main-page .item .column .start-writing {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1203,9 +1305,9 @@ a {
     text-decoration: none;
     color: #3c3c3b;
     background: #f6f7f9;
-    -webkit-transition: all 0.2s lease-in-out 0sr;
-    -o-transition: all 0.2s lease-in-out 0sr;
-    transition: all 0.2s lease-in-out 0sr;
+    -webkit-transition: all 0.2s lease-in-out 0s;
+    -o-transition: all 0.2s lease-in-out 0s;
+    transition: all 0.2s lease-in-out 0s;
 }
 
 .main-page .item .column.center .content__image .tag-link:hover {
@@ -1333,14 +1435,6 @@ a {
     width: 160px;
 }
 
-.main-page .item.first-page {
-    padding-bottom: 30px;
-}
-
-.main-page .item.second-page {
-    padding-bottom: 30px;
-}
-
 .footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1453,6 +1547,7 @@ a {
 @media only screen and (max-width: 475px) {
     .main-page .item .column__title {
         font-size: 26px;
+        letter-spacing: normal;
     }
 
     .main-page .item .column .row .content__image {
@@ -1481,6 +1576,22 @@ a {
         font-size: 26px;
     }
 
+    .main-page .item .column.center .content__text .meta .profile > a > img {
+        max-width: 75px;
+    }
+
+    .main-page .item .column.center .content__text .meta .full-name .link {
+        font-size: 16px;
+    }
+
+    .main-page .item .column.center .content__text .meta .full-name h3 small {
+        font-size: 18px;
+    }
+
+    .main-page .item .column.center .content__text .meta .time {
+        font-size: 12px;
+    }
+
     .main-page .item .column.right .profile {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
@@ -1494,5 +1605,21 @@ a {
 
     .header__btns .btn {
         font-size: 16px;
+    }
+
+    .main-page .item .column.center .content__text .meta .profile > a > img {
+        max-width: 50px;
+    }
+
+    .main-page .item .column.center .content__text .meta .full-name .link {
+        font-size: 12px;
+    }
+
+    .main-page .item .column.center .content__text .meta .full-name h3 small {
+        font-size: 14px;
+    }
+
+    .main-page .item .column.center .content__text .meta .time {
+        font-size: 10px;
     }
 }

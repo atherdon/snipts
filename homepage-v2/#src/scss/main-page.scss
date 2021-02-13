@@ -9,6 +9,8 @@
 
 	.item {
 		display: flex;
+		padding-top: 30px;
+		padding-bottom: 30px;
 
 		.column {
 			flex: 0 1 33.3333%;
@@ -21,6 +23,7 @@
 
 				@media only screen and (max-width: 475px) {
 					font-size: 26px;
+					letter-spacing: normal;
 				}
 			}
 
@@ -83,7 +86,7 @@
 							text-decoration: none;
 							color: #3c3c3b;
 							background: #f6f7f9;
-							transition: all 0.2s lease-in-out 0sr;
+							transition: all 0.2s lease-in-out 0s;
 
 							&:hover {
 								box-shadow: #0b0 0 0.2em, #0b0 0 -0.2em, #0b0 0.2em 0, #0b0 -0.2em 0;
@@ -137,8 +140,7 @@
 
 									> img {
 										max-width: 50px;
-										box-shadow: rgb(194, 202, 214) 0 0.2em, rgb(194, 202, 214) 0 -0.2em,
-											rgb(194, 202, 214) 0.2em 0, rgb(194, 202, 214) -0.2em 0;
+										box-shadow: #c2cad6 0 0.2em, #c2cad6 0 -0.2em, #c2cad6 0.2em 0, #c2cad6 -0.2em 0;
 									}
 								}
 							}
@@ -172,6 +174,71 @@
 
 				@media only screen and (max-width: 475px) {
 					flex-wrap: wrap;
+				}
+			}
+
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 10px;
+
+				.tag-item {
+					display: flex;
+					flex: 1 0;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin-top: 10px;
+					margin-right: 5px;
+					border: 2px solid $mine-shaft;
+					border-radius: 5px;
+					background-color: $iron;
+
+					p {
+						white-space: nowrap;
+					}
+
+					span {
+						padding-top: 10px;
+						font-family: "IBMPlexMono-Regular";
+						white-space: nowrap;
+					}
+
+					&.sm {
+						padding: 10px;
+
+						p {
+							font-size: 18px;
+						}
+
+						span {
+							font-size: 12px;
+						}
+					}
+
+					&.md {
+						padding: 10px;
+
+						p {
+							font-size: 22px;
+						}
+
+						span {
+							font-size: 16px;
+						}
+					}
+
+					&.xl {
+						padding: 20px;
+
+						p {
+							font-size: 26px;
+						}
+
+						span {
+							font-size: 18px;
+						}
+					}
 				}
 			}
 
@@ -258,7 +325,7 @@
 							text-decoration: none;
 							color: #3c3c3b;
 							background: #f6f7f9;
-							transition: all 0.2s lease-in-out 0sr;
+							transition: all 0.2s lease-in-out 0s;
 
 							&:hover {
 								box-shadow: #0b0 0 0.2em, #0b0 0 -0.2em, #0b0 0.2em 0, #0b0 -0.2em 0;
@@ -322,8 +389,15 @@
 
 									> img {
 										max-width: 100px;
-										box-shadow: rgb(194, 202, 214) 0 0.2em, rgb(194, 202, 214) 0 -0.2em,
-											rgb(194, 202, 214) 0.2em 0, rgb(194, 202, 214) -0.2em 0;
+										box-shadow: #c2cad6 0 0.2em, #c2cad6 0 -0.2em, #c2cad6 0.2em 0, #c2cad6 -0.2em 0;
+
+										@media only screen and (max-width: 475px) {
+											max-width: 75px;
+										}
+
+										@media only screen and (max-width: 320px) {
+											max-width: 50px;
+										}
 									}
 								}
 							}
@@ -333,6 +407,14 @@
 
 								.link {
 									font-size: 20px;
+
+									@media only screen and (max-width: 475px) {
+										font-size: 16px;
+									}
+
+									@media only screen and (max-width: 320px) {
+										font-size: 12px;
+									}
 								}
 
 								h3 {
@@ -340,6 +422,14 @@
 										display: block;
 										margin-top: 8px;
 										font-size: 24px;
+
+										@media only screen and (max-width: 475px) {
+											font-size: 18px;
+										}
+
+										@media only screen and (max-width: 320px) {
+											font-size: 14px;
+										}
 									}
 								}
 							}
@@ -347,6 +437,14 @@
 							.time {
 								font-size: 16px;
 								text-align: right;
+
+								@media only screen and (max-width: 475px) {
+									font-size: 12px;
+								}
+
+								@media only screen and (max-width: 320px) {
+									font-size: 10px;
+								}
 							}
 						}
 					}
@@ -386,14 +484,6 @@
 			@media only screen and (max-width: 1000px) {
 				flex: 0 1 100%;
 			}
-		}
-
-		&.first-page {
-			padding-bottom: 30px;
-		}
-
-		&.second-page {
-			padding-bottom: 30px;
 		}
 
 		@media only screen and (max-width: 1375px) {

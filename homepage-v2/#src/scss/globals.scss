@@ -170,24 +170,14 @@ a {
 	padding: 2px 0 1px;
 	font-size: 12px;
 	word-break: break-word;
-	background-image: linear-gradient(
-		transparent 0%,
-		transparent calc(50% - 9px),
-		rgba(0, 255, 0, 0.35) calc(50% - 9px),
-		rgba(0, 255, 0, 0.35) 100%
-	);
+	background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #a6ffa6 calc(50% - 9px), #a6ffa6 100%);
 	background-position: 0 0;
 	background-size: 100% 200%;
 	transition: all 120ms ease-in-out 0s;
 	cursor: pointer;
 
 	&:hover {
-		background-image: linear-gradient(
-			transparent 0%,
-			transparent calc(50% - 9px),
-			rgb(0, 255, 0) calc(50% - 9px),
-			rgb(0, 255, 0) 100%
-		);
+		background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), $green calc(50% - 9px), $green 100%);
 		background-position: 0 100%;
 	}
 }
@@ -198,6 +188,7 @@ a {
 	justify-content: center;
 	padding: 10px;
 	width: 100%;
+	font-size: 18px;
 	background-color: $starship;
 
 	img {
@@ -222,7 +213,25 @@ a {
 		}
 	}
 
+	&.crimson {
+		background-color: $alizarin-crimson;
 
+		a {
+			color: $white;
+		}
+	}
+
+	&.finn {
+		background-color: #622362;
+
+		a {
+			color: $white;
+		}
+	}
+
+	&.gorse {
+		background-color: $gorse;
+	}
 }
 
 .adv-link {
