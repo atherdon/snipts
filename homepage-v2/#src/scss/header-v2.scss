@@ -1,4 +1,6 @@
-.header {
+.header-v2 {
+	position: fixed;
+	z-index: 999;
 	width: 100%;
 	background-color: $green;
 
@@ -163,7 +165,7 @@
 			}
 		}
 
-		&.adv {
+		&.adv2 {
 			a {
 				color: $white;
 			}
