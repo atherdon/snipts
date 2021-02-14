@@ -1,0 +1,497 @@
+.main-page {
+	padding-top: 190px;
+	width: 100%;
+
+	.wrapper {
+		padding: 20px 0;
+		width: 100%;
+	}
+
+	.item {
+		display: flex;
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		.column {
+			flex: 0 1 33.3333%;
+			padding: 0 10px;
+
+			&__title {
+				font-size: 36px;
+				letter-spacing: 5px;
+				text-decoration: underline;
+
+				@media only screen and (max-width: 475px) {
+					font-size: 26px;
+					letter-spacing: normal;
+				}
+			}
+
+			.row {
+				display: flex;
+				margin-top: 20px;
+
+				.content {
+					&__image {
+						position: relative;
+						flex-shrink: 0;
+						overflow: hidden;
+						width: 220px;
+						height: 190px;
+						background-color: $iron;
+
+						.reactions {
+							padding: 5px;
+							font-family: "IBMPlexMono-Regular";
+							line-height: 100%;
+						}
+
+						.image-wrapper {
+							display: block;
+							overflow: hidden;
+							width: 100%;
+							height: 100%;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								transition: all 0.2s ease-in-out 0s;
+							}
+
+							&:hover {
+								img {
+									transform: scale(1.1);
+									transition: all 0.2s ease-in-out 0s;
+								}
+							}
+						}
+
+						.tag {
+							position: absolute;
+							right: 10px;
+							bottom: 10px;
+							z-index: 1;
+							margin: 0;
+						}
+
+						.tag-link {
+							display: flex;
+							align-items: center;
+							margin: 0 10px 10px 0;
+							padding: 10px;
+							width: auto;
+							box-shadow: #c2cad6 0 0.2em, #c2cad6 0 -0.2em, #c2cad6 0.2em 0, #c2cad6 -0.2em 0;
+							line-height: 1em;
+							text-decoration: none;
+							color: #3c3c3b;
+							background: #f6f7f9;
+							transition: all 0.2s lease-in-out 0s;
+
+							&:hover {
+								box-shadow: #0b0 0 0.2em, #0b0 0 -0.2em, #0b0 0.2em 0, #0b0 -0.2em 0;
+								color: #3c3c3b;
+								background: #0f0;
+								transition: all 0.2s ease-in-out 0s;
+							}
+						}
+
+						@media only screen and (max-width: 475px) {
+							width: 100%;
+							height: 200px;
+						}
+					}
+
+					&__text {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						margin-left: 20px;
+						padding-top: 30px;
+						width: 100%;
+
+						.title {
+							a {
+								font-size: 20px;
+								text-transform: capitalize;
+
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+
+						.meta {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							border-bottom: 1px solid $iron;
+							padding: 15px 10px 0;
+
+							.profile {
+								display: flex;
+								margin-bottom: 0;
+								padding-right: 10px;
+
+								> a {
+									display: flex;
+									align-items: flex-start;
+									background-color: $white;
+
+									> img {
+										max-width: 50px;
+										box-shadow: #c2cad6 0 0.2em, #c2cad6 0 -0.2em, #c2cad6 0.2em 0, #c2cad6 -0.2em 0;
+									}
+								}
+							}
+
+							.full-name {
+								padding-left: 10px;
+							}
+
+							.time {
+								font-size: 0.8rem;
+								text-align: right;
+							}
+
+							h3 {
+								margin-bottom: 28px;
+								font-size: 16px;
+
+								small {
+									display: block;
+									margin-top: 8px;
+									font-size: 12px;
+								}
+							}
+						}
+
+						@media only screen and (max-width: 475px) {
+							margin-left: 0;
+						}
+					}
+				}
+
+				@media only screen and (max-width: 475px) {
+					flex-wrap: wrap;
+				}
+			}
+
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: 10px;
+
+				.tag-item {
+					display: flex;
+					flex: 1 0;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin-top: 10px;
+					margin-right: 5px;
+					border: 2px solid $mine-shaft;
+					border-radius: 5px;
+					background-color: $iron;
+
+					p {
+						white-space: nowrap;
+					}
+
+					span {
+						padding-top: 10px;
+						font-family: "IBMPlexMono-Regular";
+						white-space: nowrap;
+					}
+
+					&.sm {
+						padding: 10px;
+
+						p {
+							font-size: 18px;
+						}
+
+						span {
+							font-size: 12px;
+						}
+					}
+
+					&.md {
+						padding: 10px;
+
+						p {
+							font-size: 22px;
+						}
+
+						span {
+							font-size: 16px;
+						}
+					}
+
+					&.xl {
+						padding: 20px;
+
+						p {
+							font-size: 26px;
+						}
+
+						span {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+
+			.start-writing {
+				display: flex;
+				align-items: center;
+				margin-top: 50px;
+				padding: 10px;
+				width: 100%;
+				background-color: $green;
+
+				.text {
+					font-size: 24px;
+
+					a {
+						font-size: 28px;
+						text-decoration: underline;
+
+						@media only screen and (max-width: 475px) {
+							font-size: 20px;
+						}
+					}
+
+					@media only screen and (max-width: 475px) {
+						font-size: 18px;
+					}
+				}
+
+				img {
+					margin: 0 20px;
+					width: 50px;
+					height: 50px;
+				}
+			}
+
+			&.center {
+				.content {
+					&__image {
+						position: relative;
+						flex-shrink: 0;
+						overflow: hidden;
+						width: 100%;
+						height: 400px;
+						background-color: $iron;
+
+						.image-wrapper {
+							display: block;
+							overflow: hidden;
+							width: 100%;
+							height: 100%;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								object-position: left top;
+								transition: all 0.2s ease-in-out 0s;
+							}
+
+							&:hover {
+								img {
+									transform: scale(1.1);
+									transition: all 0.2s ease-in-out 0s;
+								}
+							}
+						}
+
+						.tag {
+							position: absolute;
+							right: 10px;
+							bottom: 10px;
+							z-index: 1;
+							margin: 0;
+						}
+
+						.tag-link {
+							display: flex;
+							align-items: center;
+							margin: 0 10px 10px 0;
+							padding: 10px;
+							width: auto;
+							box-shadow: #c2cad6 0 0.2em, #c2cad6 0 -0.2em, #c2cad6 0.2em 0, #c2cad6 -0.2em 0;
+							line-height: 1em;
+							text-decoration: none;
+							color: #3c3c3b;
+							background: #f6f7f9;
+							transition: all 0.2s lease-in-out 0s;
+
+							&:hover {
+								box-shadow: #0b0 0 0.2em, #0b0 0 -0.2em, #0b0 0.2em 0, #0b0 -0.2em 0;
+								color: #3c3c3b;
+								background: #0f0;
+								transition: all 0.2s ease-in-out 0s;
+							}
+						}
+					}
+
+					&__text {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						padding-top: 10px;
+
+						.reactions {
+							padding: 5px;
+							font-family: "IBMPlexMono-Regular";
+							line-height: 100%;
+							text-align: center;
+							background-color: $iron;
+						}
+
+						.title {
+							padding-bottom: 10px;
+
+							a {
+								font-size: 36px;
+								text-transform: capitalize;
+
+								&:hover {
+									text-decoration: underline;
+								}
+
+								@media only screen and (max-width: 475px) {
+									font-size: 26px;
+								}
+							}
+						}
+
+						.meta {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							margin: 0 10px;
+							border: solid $iron;
+							border-width: 0 1px 1px;
+							padding: 10px;
+
+							.profile {
+								display: flex;
+								align-items: center;
+								margin-bottom: 0;
+								padding-right: 10px;
+
+								> a {
+									display: flex;
+									align-items: flex-start;
+									background-color: $white;
+
+									> img {
+										max-width: 100px;
+										box-shadow: #c2cad6 0 0.2em, #c2cad6 0 -0.2em, #c2cad6 0.2em 0, #c2cad6 -0.2em 0;
+
+										@media only screen and (max-width: 475px) {
+											max-width: 75px;
+										}
+
+										@media only screen and (max-width: 320px) {
+											max-width: 50px;
+										}
+									}
+								}
+							}
+
+							.full-name {
+								padding-left: 10px;
+
+								.link {
+									font-size: 20px;
+
+									@media only screen and (max-width: 475px) {
+										font-size: 16px;
+									}
+
+									@media only screen and (max-width: 320px) {
+										font-size: 12px;
+									}
+								}
+
+								h3 {
+									small {
+										display: block;
+										margin-top: 8px;
+										font-size: 24px;
+
+										@media only screen and (max-width: 475px) {
+											font-size: 18px;
+										}
+
+										@media only screen and (max-width: 320px) {
+											font-size: 14px;
+										}
+									}
+								}
+							}
+
+							.time {
+								font-size: 16px;
+								text-align: right;
+
+								@media only screen and (max-width: 475px) {
+									font-size: 12px;
+								}
+
+								@media only screen and (max-width: 320px) {
+									font-size: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.right {
+				.content__text {
+					margin: 0;
+					padding-top: 0;
+
+					.meta {
+						border-bottom: 0;
+						padding: 0;
+					}
+				}
+
+				.profile {
+					@media only screen and (max-width: 475px) {
+						flex-wrap: wrap;
+					}
+				}
+
+				.full-name {
+					flex-shrink: 0;
+					margin: 0 20px;
+					padding: 0;
+					width: 160px;
+				}
+			}
+
+			@media only screen and (max-width: 1375px) {
+				flex: 0 1 50%;
+				margin-top: 20px;
+			}
+
+			@media only screen and (max-width: 1000px) {
+				flex: 0 1 100%;
+			}
+		}
+
+		@media only screen and (max-width: 1375px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	@media only screen and (max-width: 1150px) {
+		padding-top: 100px;
+	}
+}
