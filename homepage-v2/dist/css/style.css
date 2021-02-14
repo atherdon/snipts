@@ -562,6 +562,10 @@ body.dark .tags .tag-item span {
     color: #3b3b3b;
 }
 
+body.dark .main-page .item .column .row .content__text .meta .profile > a {
+    background-color: #212428;
+}
+
 h1,
 h2,
 h3,
