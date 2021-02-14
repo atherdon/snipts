@@ -19,6 +19,7 @@
 			&__title {
 				font-size: 36px;
 				letter-spacing: 5px;
+				white-space: nowrap;
 				text-decoration: underline;
 
 				@media only screen and (max-width: 475px) {
@@ -193,6 +194,7 @@
 					border: 2px solid $mine-shaft;
 					border-radius: 5px;
 					background-color: $iron;
+					transition: all 0.2s ease-in-out 0s;
 
 					p {
 						white-space: nowrap;
@@ -202,6 +204,11 @@
 						padding-top: 10px;
 						font-family: "IBMPlexMono-Regular";
 						white-space: nowrap;
+					}
+
+					&:hover {
+						background-color: $green;
+						transition: all 0.2s ease-in-out 0s;
 					}
 
 					&.sm {
@@ -473,6 +480,66 @@
 					margin: 0 20px;
 					padding: 0;
 					width: 160px;
+				}
+			}
+
+			&.col-4 {
+				flex: 0 1 25%;
+				padding: 0 20px;
+
+				.column__title {
+					
+
+					@media only screen and (max-width: 1440px) {
+						font-size: 32px;
+						letter-spacing: normal;
+					}
+
+					@media only screen and (max-width: 414px) {
+						font-size: 26px;
+					}
+				}
+
+				.row {
+					.content__text {
+						margin-left: 0;
+
+						.title {
+							a {
+								font-family: "IBMPlexMono-Regular";
+								font-size: 28px;
+								line-height: 22px;
+								letter-spacing: 2px;
+								text-transform: none;
+
+								@media only screen and (max-width: 414px) {
+									font-size: 22px;
+									line-height: 20px;
+								}
+							}
+						}
+
+						@media only screen and (max-width: 414px) {
+							padding-top: 10px;
+						}
+					}
+
+					@media only screen and (max-width: 414px) {
+						margin-top: 10px;
+					}
+				}
+
+				@media only screen and (max-width: 1375px) {
+					flex: 0 1 33.33333%;
+					padding-top: 10px;
+				}
+
+				@media only screen and (max-width: 854px) {
+					flex: 0 1 50%;
+				}
+
+				@media only screen and (max-width: 695px) {
+					flex: 0 1 100%;
 				}
 			}
 

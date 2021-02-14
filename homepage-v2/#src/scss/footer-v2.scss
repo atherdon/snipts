@@ -1,0 +1,84 @@
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 30px;
+	background-color: $green;
+
+	&__column {
+		padding: 10px 20px;
+
+		&.col-4 {
+			flex: 0 1 25%;
+
+			@media only screen and (max-width: 1024px) {
+				flex: 0 1 50%;
+			}
+
+			@media only screen and (max-width: 768px) {
+				flex: 0 1 100%;
+			}
+		}
+	}
+
+	&__item {
+		padding-bottom: 15px;
+		font-family: "IBMPlexMono-Regular";
+		font-size: 18px;
+
+		a {
+			text-decoration: underline;
+		}
+
+		&.title {
+			font-family: "IBMPlexMono-Bold";
+			font-size: 26px;
+		}
+
+		&.logo {
+			display: flex;
+			align-items: center;
+			padding-bottom: 0;
+
+			img {
+				width: 40px;
+			}
+
+			p {
+				margin-left: 10px;
+				font-family: "HackerNoonV1-Regular";
+				font-size: 34px;
+
+				@media only screen and (max-width: 320px) {
+					font-size: 28px;
+				}
+			}
+		}
+
+		&.slogan {
+			font-family: "IBMPlexMono-Bold";
+			font-size: 30px;
+
+			@media only screen and (max-width: 375px) {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__follow {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__follow-item {
+		margin: 0 5px;
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	@media only screen and (max-width: 375px) {
+		padding: 10px 0;
+	}
+}

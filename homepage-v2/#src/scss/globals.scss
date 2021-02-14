@@ -34,7 +34,7 @@ body {
 			transition: all 0.2s linear;
 		}
 
-		.header {
+		.header-v2 {
 			background-color: $green-tagged-header;
 
 			.btn {
@@ -47,37 +47,37 @@ body {
 			transition: all 0.2s linear;
 		}
 
-		.header__theme-bright {
+		.header-v2__theme-bright {
 			display: none;
 		}
 
-		.header__theme-dark {
+		.header-v2__theme-dark {
 			display: block;
 		}
 
-		.header__theme {
+		.header-v2__theme {
 			background-color: $green-tagged-header;
 		}
 
-		.header__social-item.search a svg path {
+		.header-v2__social-item.search a svg path {
 			fill: $white;
 		}
 
-		.header__adv {
+		.header-v2__adv {
 			background-color: $yukon-gold;
 		}
 
-		.header__adv-link {
+		.header-v2__adv-link {
 			color: $starship;
 		}
 
-		.header__menu-item.dropdown {
+		.header-v2__menu-item.dropdown {
 			a {
 				color: $white;
 			}
 		}
 
-		.header__profile {
+		.header-v2__profile {
 			img {
 				box-shadow: $deep-fir 0 0.15em, $deep-fir 0 -0.15em, $deep-fir 0.15em 0, $deep-fir -0.15em 0;
 			}
@@ -101,7 +101,7 @@ body {
 			}
 		}
 
-		.header__search {
+		.header-v2__search {
 			.search-input {
 				color: $white;
 
@@ -109,6 +109,19 @@ body {
 					color: $iron;
 				}
 			}
+		}
+
+		.tags {
+			.tag-item {
+				p,
+				span {
+					color: $mine-shaft;
+				}
+			}
+		}
+
+		.main-page .item .column .row .content__text .meta .profile > a {
+			background-color: $shark;
 		}
 	}
 }
@@ -170,7 +183,8 @@ a {
 	padding: 2px 0 1px;
 	font-size: 12px;
 	word-break: break-word;
-	background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #a6ffa6 calc(50% - 9px), #a6ffa6 100%);
+	//background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), #a6ffa6 calc(50% - 9px), #a6ffa6 100%);
+	background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(0, 255, 0, 0.35) calc(50% - 9px), rgba(0, 255, 0, 0.35) 100%);
 	background-position: 0 0;
 	background-size: 100% 200%;
 	transition: all 120ms ease-in-out 0s;

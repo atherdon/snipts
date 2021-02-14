@@ -148,18 +148,10 @@ jQuery(function ($) {
 
 
 
-		$('.header__theme').on('click', function (e) {
+		$('.header-v2__theme').on('click', function (e) {
 			e.preventDefault();
 			$('body').toggleClass('dark');
 		});
-
-		
-
-		
-
-
-
-
 
 	});
 
